@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPortFolio</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" href="style.css">
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpeg" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">address</a></li>
+                    <li><a href="#">contacts</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Front-End Developer</p>
+                <h1>Hi,I'm <span>Rijan</span><br>Gurung from Nepal.</h1>
+            </div>
+        </div>
+    </div>    
+    <!-- ---------------about -->
+    <div id="about">
+        <div id="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/im.jpeg"
+                     alt=""></div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Illo quisquam, libero iure ratione incidunt nisi minima tempora accusamus est dolorem. Ducimus ab blanditiis veritatis culpa voluptates alias sapiente quia eaque.</p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"  onclick="opentab('education')">Education</p>
+                </div>
+                
+                
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Front-End Developer</span><br>Desigining the webs.</li>
+                        <li><span>Back-End Developer</span><br>Desigining the webs.</li>
+                        <li><span>Data Analyst</span><br>Handling the data</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>N/A</span><br>N/A</li>
+                        <li><span>N/A</span><br>N/A</li>
+                        <li><span>N/A</span><br>N/A</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2018</span><br>Mansalu H.S.School</li>
+                        <li><span>2020</span><br>NIST</li>
+                        <li><span>2022-current</span><br>ACHS</li>
+                    </ul>
+                </div>    
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- service -->
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus 
+                accusantium accusamus ut placeat itaque autem eveniet repellat veniam a, suscipit totam tempora ullam praesentium quisquam velit voluptas iure magnam illo?</p>
+                    <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Data Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus 
+                accusantium accusamus ut placeat itaque autem eveniet repellat veniam a, suscipit totam tempora ullam praesentium quisquam velit voluptas iure magnam illo?</p>
+                    <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus 
+                accusantium accusamus ut placeat itaque autem eveniet repellat veniam a, suscipit totam tempora ullam praesentium quisquam velit voluptas iure magnam illo?</p>
+                    <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- portfolio  -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">My work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png" >
+            </div>
+            
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-2.png" >
+            </div>
+            
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-3.png" >
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab (tabname){
+        for(tablink of tablinks){
+            tablink.classlist.remove("active-link");
+        }
+        
+        for(tabcontent of tabcontents){
+            tabcontent.classlist.remove("active-tab");
+        }
+        event.currentTarget.classlist.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+
+</body>
+</html>
